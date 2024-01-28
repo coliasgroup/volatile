@@ -47,7 +47,7 @@ where
 
 impl<T, A> fmt::Debug for VolatilePtr<'_, T, A>
 where
-    T: Copy + fmt::Debug + ?Sized,
+    T: ?Sized,
 {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("VolatilePtr")
